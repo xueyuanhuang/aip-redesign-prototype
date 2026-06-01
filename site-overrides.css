@@ -1,12 +1,11 @@
 footer#site-footer .container {
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 footer#site-footer .footer-repo {
   display: flex;
   flex: 1 1 18rem;
-  justify-content: center;
   margin: .75rem 0;
 }
 
@@ -14,7 +13,7 @@ footer#site-footer .footer-repo a {
   align-items: center;
   color: #fff;
   display: inline-flex;
-  font-size: 1rem;
+  font-size: .95rem;
   font-weight: 600;
   gap: .65rem;
   line-height: 1.4;
@@ -42,9 +41,12 @@ footer#site-footer .container row {
 @media (min-width: 52rem) {
   footer#site-footer .container {
     display: grid;
-    grid-template-columns: minmax(18rem, 1fr) minmax(16rem, auto) minmax(18rem, 1fr);
+    grid-template-columns: minmax(18rem, 1fr) minmax(16rem, 1fr) minmax(18rem, 1fr);
     align-items: start;
-    column-gap: 3rem;
+    column-gap: 4rem;
+    max-width: 70rem;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
   }
 
   footer#site-footer .container .brand {
@@ -54,9 +56,10 @@ footer#site-footer .container row {
 
   footer#site-footer .footer-repo {
     grid-column: 2;
-    justify-content: center;
+    justify-self: center;
     margin: 0;
-    padding-top: .4rem;
+    min-width: 16rem;
+    padding-top: .3rem;
   }
 
   footer#site-footer .container aside {
@@ -74,7 +77,6 @@ footer#site-footer .container row {
 
 @media (max-width: 52rem) {
   footer#site-footer .footer-repo {
-    justify-content: flex-start;
     margin: 1rem 0;
   }
 }
