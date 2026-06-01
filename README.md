@@ -4,7 +4,7 @@ This repository is a static prototype cloned from the current AIP website at `ht
 
 ## Version
 
-`v0.2` - Use the standalone black AB logo as the browser favicon.
+`v0.3` - Use plural "AB Improvement Proposals" in the site logo.
 
 ## Scope
 
