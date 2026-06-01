@@ -4,7 +4,7 @@ This repository is a static prototype cloned from the current AIP website at `ht
 
 ## Version
 
-`v0.3` - Use plural "AB Improvement Proposals" in the site logo.
+`v0.4` - Match the final "s" in the logo to the original SVG letter style.
 
 ## Scope
 
