@@ -13,8 +13,8 @@ footer#site-footer .footer-repo a {
   align-items: center;
   color: #fff;
   display: inline-flex;
-  font-size: .95rem;
-  font-weight: 600;
+  font-size: .875rem;
+  font-weight: 400;
   gap: .65rem;
   line-height: 1.4;
   text-decoration: none;
@@ -22,12 +22,29 @@ footer#site-footer .footer-repo a {
 }
 
 footer#site-footer .footer-repo a:hover {
-  color: var(--accent-2);
+  color: #fff;
 }
 
 footer#site-footer .footer-repo i {
   color: currentColor;
   font-size: 1.35rem;
+}
+
+footer#site-footer .container .social-icons {
+  align-items: center;
+  display: flex;
+}
+
+footer#site-footer .container .social-icons .x-social-link {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+}
+
+footer#site-footer .container .social-icons .x-social-icon {
+  display: block;
+  height: 1em;
+  width: 1em;
 }
 
 footer#site-footer .container aside h3 {
