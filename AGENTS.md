@@ -55,16 +55,27 @@ When changing site naming, titles, or branding, update all relevant places consi
 
 Browser tab hover cards mainly use the page `<title>`. The domain line is controlled by the deployed URL, not by site HTML.
 
-## Publish Workflow
+## Prototype Workflow
 
-Every website change should be pushed to GitHub so GitHub Pages can update.
+This project is currently being iterated as a local prototype. Website changes should not be automatically pushed to GitHub, because that also triggers GitHub Pages deployment and slows down fast visual iteration.
 
-Standard flow:
+Default flow:
+
+```bash
+git status --short --branch
+python3 -m http.server 4173
+```
+
+Open the local page in a browser and verify the affected page, layout, metadata, or asset locally. Use another available port if `4173` is already in use.
+
+Do not run `git commit`, `git push`, or any deployment step unless the user explicitly says to push, publish, deploy, or otherwise asks for the GitHub Pages site to be updated.
+
+When the user explicitly asks to publish, use a standard flow like:
 
 ```bash
 git status --short --branch
 git add <changed files>
-git commit -m "docs: update collaboration instructions"
+git commit -m "fix: describe the actual change"
 git push
 ```
 
@@ -84,6 +95,7 @@ For HTML or metadata changes:
 - Check relevant metadata in the HTML source.
 
 For live-site verification:
+- Only perform this after the user explicitly requested a push/publish/deploy, or when the task specifically concerns the live GitHub Pages site.
 - Use Chrome via `@chrome` when available.
 - Open `https://xueyuanhuang.github.io/aip-redesign-prototype/`.
 - Hard refresh if the page appears stale.
@@ -98,9 +110,10 @@ For layout changes:
 
 When handing off or finishing work, report:
 - Files changed.
+- Whether changes are local only, committed, or pushed.
 - Commit hash if committed.
-- Whether `git push` succeeded.
+- Whether `git push` succeeded, if a push was requested.
 - Local verification performed.
-- GitHub Pages verification result or whether it is still pending.
+- GitHub Pages verification result only when a publish was requested; otherwise state that live verification was intentionally skipped.
 
 If another window is already editing the same page, coordinate before changing that file.
