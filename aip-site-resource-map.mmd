@@ -1,0 +1,37 @@
+flowchart TD
+  Root["AIP Site 原始资源框架"]
+
+  Root --> External["1. 外部链接资源"]
+  Root --> Guides["2. AIPs 指南资源"]
+  Root --> AIPs["3. AIPs 资源"]
+
+  External --> Footer["映射到：页脚 Footer"]
+  Footer --> GitHub["GitHub"]
+  Footer --> X["X"]
+  Footer --> TG["Telegram"]
+  Footer --> AB["AB Website"]
+  Footer --> Dev["Developer Website"]
+  Footer --> Contact["Contact Team"]
+
+  Guides --> Home["映射到：首页 /"]
+  Home --> Current["Current AIPs"]
+  Home --> Start["Start an AIP"]
+  Home --> Submit["Submit, Update, and Finalize"]
+  Home --> Format["Format and Templates"]
+  Home --> Process["AIP Process"]
+  Home --> Status["AIP Status"]
+  Home --> Ownership["Ownership and Maintenance"]
+
+  AIPs --> Header["映射到：页眉 Header 分类导航"]
+
+  Header --> All["All /all/"]
+  Header --> Gov["Community Governance /community-governance/"]
+  Header --> Tech["Technical /technical/"]
+
+  All --> AIP0["AIP-0 /aips/aip-0/"]
+  All --> AIP20["AIP-20 /aips/aip-20/"]
+  All --> AIP721["AIP-721 /aips/aip-721/"]
+
+  Gov --> AIP0
+  Tech --> AIP20
+  Tech --> AIP721
